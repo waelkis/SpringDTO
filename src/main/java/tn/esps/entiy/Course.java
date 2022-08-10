@@ -1,7 +1,8 @@
 package tn.esps.entiy;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
-
+@Entity
 public class Course {
 	@Id
 	private Long id;
