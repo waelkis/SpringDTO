@@ -1,5 +1,14 @@
 package tn.esps.entiy;
 
-public class Course {
+import javax.persistence.Id;
 
+public class Course {
+	@Id
+	private Long id;
+
+	private String name;
+
+	private String cost;
+
+	private String time;
 }
