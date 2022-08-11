@@ -34,5 +34,11 @@ public class StudentService {
 		return studentDTOS;
 		
 	}
+	public Student getStudent(Long id) {
+	 
+	 return	studentDao.findById(id).get();
+		
+		
+	}
 
 }
