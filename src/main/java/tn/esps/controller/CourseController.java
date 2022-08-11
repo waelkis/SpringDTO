@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.esps.entiy.Course;
+import tn.esps.entiy.CourseDTO;
 import tn.esps.service.CourseService;
 
 @RestController
@@ -17,7 +18,7 @@ public class CourseController {
 	private CourseService courseService;
 	
 	@RequestMapping("/allCourses")
-	public List<Course> getAllCourses(){
+	public List<CourseDTO> getAllCourses(){
 		return courseService.getCourses();
 	}
 	

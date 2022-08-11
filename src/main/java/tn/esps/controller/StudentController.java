@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.esps.entiy.Student;
+import tn.esps.entiy.StudentDTO;
 import tn.esps.service.StudentService;
 
 @RestController
@@ -18,7 +19,7 @@ public class StudentController {
 
 	
 	@GetMapping("/allStudents")
-	public List<Student> getAllStudents() {
+	public List<StudentDTO> getAllStudents() {
 		return studentService.getStudents();
 	}
 
