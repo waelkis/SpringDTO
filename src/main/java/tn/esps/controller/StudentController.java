@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tn.esps.entiy.Student;
 import tn.esps.entiy.StudentDTO;
+import tn.esps.entiy.StudentRes;
 import tn.esps.service.StudentService;
 
 @RestController
@@ -26,7 +27,7 @@ public class StudentController {
 	
 	//http://localhost:8081/student/getStudent?id_stident=1
 	@GetMapping("/getStudents")
-	public Student getStudent(@RequestParam("id_stident") Long id) {
+	public StudentRes getStudent(@RequestParam("id_stident") Long id) {
 		return studentService.getStudent(id);
 	}
 

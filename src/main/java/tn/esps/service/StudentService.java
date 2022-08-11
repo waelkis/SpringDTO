@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import tn.esps.dao.StudentDao;
 import tn.esps.entiy.Student;
 import tn.esps.entiy.StudentDTO;
+import tn.esps.entiy.StudentRes;
 
 @Service
 public class StudentService {
@@ -34,9 +35,16 @@ public class StudentService {
 		return studentDTOS;
 		
 	}
-	public Student getStudent(Long id) {
+	public StudentRes getStudent(Long id) {
 	 
-	 return	studentDao.findById(id).get();
+	   Student student=studentDao.findById(id).get();
+	   
+	   StudentRes studentRes = new StudentRes();
+	   
+	   studentRes.setName(student.getName());
+	   
+	   return studentRes;
+	   
 		
 		
 	}
