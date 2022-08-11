@@ -7,6 +7,6 @@ import lombok.Setter;
 @Setter
 public class StudentRes {
 	
-	private String Name;
+	private String name;
 
 }
