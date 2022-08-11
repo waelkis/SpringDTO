@@ -41,7 +41,10 @@ public class StudentService {
 
 		Student student = studentDao.findById(id).get();
 
-		StudentRes studentRes = modelMapper.map(student, StudentRes.class);
+		StudentRes studentRes = new StudentRes();
+		studentRes.setPhone("52708318");
+		//studentRes=modelMapper.map(student, StudentRes.class);
+		modelMapper.map(student, studentRes);
 
 	
 

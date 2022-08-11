@@ -8,5 +8,6 @@ import lombok.Setter;
 public class StudentRes {
 	
 	private String name;
+	private String phone;
 
 }
