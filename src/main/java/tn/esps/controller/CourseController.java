@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import tn.esps.entiy.Course;
 import tn.esps.service.CourseService;
 
-@RestController("/courses")
+@RestController
+@RequestMapping("/courses")
 public class CourseController {
 	
 	@Autowired
