@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tn.esps.entiy.Student;
 import tn.esps.entiy.StudentDTO;
+import tn.esps.entiy.StudentPositionDto;
 import tn.esps.entiy.StudentRes;
 import tn.esps.service.StudentService;
 
@@ -33,6 +34,11 @@ public class StudentController {
 	@GetMapping("/allStudentsR")
 	public List<Student> getAllStudentsAferR() {
 		return studentService.getStudentsAfterR();
+	}
+	
+	@GetMapping("/student_course")
+	public StudentPositionDto  getStudentourse(@RequestParam("course_id_list") List<Long>  ids) {
+		return studentService.getStudentourse(ids);
 	}
 
 }
