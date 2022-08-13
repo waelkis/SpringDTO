@@ -51,5 +51,9 @@ public class StudentService {
 		return studentRes;
 
 	}
+	public List<Student> getStudentsAfterR() {
+		return studentDao.findAll();
+	}
+
 
 }

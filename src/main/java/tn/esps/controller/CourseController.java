@@ -22,5 +22,10 @@ public class CourseController {
 		return courseService.getCourses();
 	}
 	
+	@RequestMapping("/allCoursesR")
+	public List<Course> getAllCoursesAfterR(){
+		return courseService.getCoursesAfterRelation();
+	}
+	
 
 }

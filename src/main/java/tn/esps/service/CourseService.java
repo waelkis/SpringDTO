@@ -29,7 +29,12 @@ public class CourseService {
 			
 		}
 		return courseDTOS;
-	}
+		
 	
+		
+	}
+		public List<Course> getCoursesAfterRelation(){
+		return courseDao.findAll();
+		}
 
 }
